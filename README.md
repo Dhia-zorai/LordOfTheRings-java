@@ -4,7 +4,7 @@
 
 This repository contains a **Java implementation of a character management system** based on the **Lord of the Rings** universe. It was developed as part of a **Programming Oriented Object (POO)** exam.
 
-The objective is to model different **Middle-earth races** and **character archetypes** using core Java principles such as:
+The objective is to model different **Middle earth races** and **character archetypes** using core Java principles such as:
 
 * Inheritance
 * Abstract Classes
@@ -66,7 +66,7 @@ void attacks(Character p);
 void steals(Character p);
 ```
 
-* Transfers coins (`sous`) between characters
+* Transfers coins (`Coins`) between characters
 
 This allows flexible combinations such as a **Warrior–Thief–Dwarf**.
 
