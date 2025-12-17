@@ -72,4 +72,4 @@ Adding a Magicien interface for spell-casting logic.
 
 Implementing a "Mount Doom" event.
 
-Developed for the "Examen TP Java" - December 2024.
+Developed for the "Java End Of Semester 3 test" - December 2025.
