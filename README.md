@@ -1,75 +1,129 @@
-💍 Lord of the Rings: OOP with Java
-📜 Project Overview
-This repository contains a Java implementation of a character management system based on the Lord of the Rings universe. This was developed as part of a Programming Oriented Object (POO) exam.
+# 💍 Lord of the Rings — OOP with Java 📜
 
-The goal of this project was to model different Middle earth races and character archetypes using core Java principles like Inheritance, Abstract Classes, Interfaces, and Encapsulation.
+## Project Overview
 
-🏗️ Technical Architecture
-The project is structured around an abstract base class Character which defines the foundational attributes for any inhabitant of Middle-earth:
+This repository contains a **Java implementation of a character management system** based on the **Lord of the Rings** universe. It was developed as part of a **Programming Oriented Object (POO)** exam.
 
-Attributes: Name, Health (initialized at 100), Position (x, y), Movement Speed, and Currency.
+The objective is to model different **Middle-earth races** and **character archetypes** using core Java principles such as:
 
-The "Coins" Variable: A key part of the assignment was managing character wealth through the (coins/money) variable.
+* Inheritance
+* Abstract Classes
+* Interfaces
+* Encapsulation
 
-Movement Logic: Includes a seDeplacer method that calculates character movement over time t in a 2D coordinate system.
+---
 
-🧝 Races (Inheritance)
-Each race extends the Character class and implements its own unique speaks() method:
+## 🏗️ Technical Architecture
 
-Humans: Speed 5, says "One does not simply walk into Mordor."
+The project revolves around an **abstract base class** `Character`, which defines the shared attributes and behaviors of all Middle-earth inhabitants.
 
-Elves: Speed 7, says "A star shines on the hour of our meeting."
+### Core Attributes
 
-Dwarves: Speed 2, says "May your beard grow ever longer."
+* `name`
+* `health` (initialized to **100**)
+* `position` → `(x, y)` coordinates
+* `movementSpeed`
+* `coins` (character currency)
 
-Hobbits: Speed 5, says "All’s well that ends better."
+### 💰 Currency Logic
 
-⚔️ Combat & Skills (Interfaces)
-To handle special abilities like attacking or stealing without cluttering the main inheritance tree, I used Interfaces:
+Managing character wealth through the `coins` variable is a key part of the assignment.
 
-Warrior: Defines attacks(Character p) to reduce an opponent's health.
+### 🧭 Movement Logic
 
-Thief: Defines steals(Character p) to transfer "sous" (coins) between characters.
+A `seDeplacer(t)` method calculates movement over time `t` in a **2D coordinate system**.
 
-💍 The One Ring (Special Logic)
-The project also includes a SauronsRing class that implements a Ring abstraction. It handles visibility logic:
+---
 
-wear(): Sets visibility to false.
+## 🧝 Races (Inheritance)
 
-remove(): Sets visibility to true.
+Each race **extends** the `Character` class and overrides its own `speaks()` method.
 
-🚀 How to Run
-Ensure you have JDK 8+ installed.
+| Race    | Speed | Quote                                       |
+| ------- | ----- | ------------------------------------------- |
+| Humans  | 5     | "One does not simply walk into Mordor."     |
+| Elves   | 7     | "A star shines on the hour of our meeting." |
+| Dwarves | 2     | "May your beard grow ever longer."          |
+| Hobbits | 5     | "All’s well that ends better."              |
 
-Clone the repository:
+---
 
-Bash
+## ⚔️ Combat & Skills (Interfaces)
 
+To avoid bloating the inheritance tree, **interfaces** are used to define special abilities.
+
+### 🗡️ Warrior Interface
+
+```java
+void attacks(Character p);
+```
+
+* Reduces the opponent’s health
+
+### 🕵️ Thief Interface
+
+```java
+void steals(Character p);
+```
+
+* Transfers coins (`sous`) between characters
+
+This allows flexible combinations such as a **Warrior–Thief–Dwarf**.
+
+---
+
+## 💍 The One Ring (Special Logic)
+
+A `SauronsRing` class implements the `Ring` abstraction and handles visibility logic.
+
+### Ring Behavior
+
+* `wear()` → sets visibility to `false`
+* `remove()` → sets visibility to `true`
+
+---
+
+## 🚀 How to Run
+
+### Requirements
+
+* **JDK 8+**
+
+### Clone the Repository
+
+```bash
 git clone https://github.com/yourusername/lotr-java-oop.git
-Compile and run the Main.java file to see a simulation of:
+```
 
-Character stats initialization.
+### Run
 
-Dialogue triggers.
+Compile and run `Main.java` to see:
 
-Interaction logic (e.g., Durin stealing from and attacking Boromir).
+* Character initialization
+* Dialogue triggers
+* Interaction logic (e.g. *Durin stealing from and attacking Boromir*)
 
-🎓 Learning Objectives
-Solidifying JAVA skills through more complicated projects.
+---
 
-Implementing Abstract Classes for shared logic.
+## 🎓 Learning Objectives
 
-Using Interfaces for multi-role characters (like a Warrior-Thief-Dwarf).
+* Strengthen **Java OOP fundamentals**
+* Use **Abstract Classes** for shared logic
+* Apply **Interfaces** for multi-role characters
+* Translate fantasy-world rules into **clean, maintainable Java code**
 
-Translating real-world (or fantasy-world) requirements into clean, encapsulated Java code.
+---
 
-🛠️ Next Steps
-I might expand this by:
+## 🛠️ Next Steps
 
-Adding a GUI to visualize the character movement on the (x, y) plane.
+Possible future extensions:
 
-Adding a Magicien interface for spell-casting logic.
+* GUI to visualize character movement on the `(x, y)` plane
+* Add a `Magician` interface for spell-casting
+* Implement a **Mount Doom** global event
 
-Implementing a "Mount Doom" event.
+---
 
-Developed for the "Java End Of Semester 3 test" - December 2025.
+## 📅 Academic Context
+
+Developed for the **Java End of Semester 3 Test** — *December 2025*
